@@ -3,14 +3,41 @@ const User = require('./User');
 
 function registrateUser() {
   console.clear();
-  const userName = readlineSync.question('Введи своё имя: ');
+
+  const userName = readlineSync.question('Введите своё имя: ');
   const newUser = new User(userName);
+
   console.clear();
-  const chosenTheme = readlineSync.question(
-    `Привет, ${newUser.name}! Выбери тему:
+
+  let chosenTheme = readlineSync.question(
+    `Здравствуйте, ${newUser.name}! Выберите номер темы:
+
     1. Nighthawk
     2. Otter
-    3. Raccoon\n\n`
+    3. Raccoon
+    
+    `
   );
+
+  console.clear();
+
+  switch (chosenTheme) {
+    case '1':
+      chosenTheme = './topics/nighthawk_flashcard_data.txt';
+      break;
+
+    case '2':
+      chosenTheme = './topics/otter_flashcard_data.txt';
+      break;
+
+    case '3':
+      chosenTheme = './topics/raccoon_flashcard_data.txt';
+      break;
+
+    default:
+      console.log(`Темы под номером "${chosenTheme}" не существует!`);
+      setTimeout(registrateUser, 3000);
+      break;
+  }
 }
 registrateUser();
