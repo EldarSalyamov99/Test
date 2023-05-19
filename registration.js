@@ -8,9 +8,12 @@ function registrateUser() {
   console.clear();
   const chosenTheme = readlineSync.question(
     `Привет, ${newUser.name}! Выбери тему:
+
     1. Nighthawk
     2. Otter
-    3. Raccoon\n\n`
+    3. Raccoon
+    
+    `
   );
 }
 registrateUser();
