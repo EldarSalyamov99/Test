@@ -4,6 +4,7 @@ const User = require('./User');
 
 const newUser = new User();
 let theme;
+
 function registrateUser() {
   console.clear();
 
@@ -44,9 +45,9 @@ function registrateUser() {
     default:
       console.log(`Темы под номером "${chosenTheme}" не существует!`);
       setTimeout(registrateUser, 4000);
-      setTimeout(console.log, 1000, 3);
-      setTimeout(console.log, 2000, 2);
-      setTimeout(console.log, 3000, 1);
+      setTimeout(console.log, 1000, 'Возврат в главное меню через 3 секунды.');
+      setTimeout(console.log, 2000, 'Возврат в главное меню через 2 секунды.');
+      setTimeout(console.log, 3000, 'Возврат в главное меню через 1 секунду.');
       break;
   }
 
