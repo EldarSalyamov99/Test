@@ -6,7 +6,7 @@ function handlerData() {
     const answer = readlineSync.question(`----------------------\n${theme[i][0]}\n`);
 
     if (answer === theme[i][1]) {
-      console.log(` ✓ Это правильный ответ! 🏆 \n`);
+      console.log(' ✓ Это правильный ответ! 🏆 \n');
       newUser.scores += 100;
       newUser.rightAnsw += 1;
       // setTimeout(console.clear, 3000)
