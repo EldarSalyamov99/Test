@@ -7,8 +7,6 @@ const fs = require('fs');
 //   }
 // }
 
-// const nighthawk = new Topic()
-
 const nighthawkArr = fs
   .readFileSync(`${__dirname}/topics/nighthawk_flashcard_data.txt`, 'utf-8')
   .split('\n\n');
@@ -33,6 +31,14 @@ for (let i = 0; i < raccoonArr.length; i += 1) {
   raccoon.push(raccoonArr[i].trim().split('\n'));
 }
 
+const slangArr = fs
+  .readFileSync(`${__dirname}/topics/slang.txt`, 'utf-8')
+  .split('\n\n');
+const slang = [];
+for (let i = 0; i < slangArr.length; i += 1) {
+  slang.push(slangArr[i].trim().split('\n'));
+}
+
 //console.log(nighthawk, otter, raccoon);
 
-module.exports = { nighthawk, otter, raccoon };
+module.exports = { nighthawk, otter, raccoon, slang };
