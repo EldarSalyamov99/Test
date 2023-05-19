@@ -1,6 +1,8 @@
 const readlineSync = require('readline-sync');
+const { nighthawk, otter, raccoon } = require('./Topics');
 const User = require('./User');
 
+let theme;
 function registrateUser() {
   console.clear();
 
@@ -23,21 +25,28 @@ function registrateUser() {
 
   switch (chosenTheme) {
     case '1':
-      chosenTheme = './topics/nighthawk_flashcard_data.txt';
+      chosenTheme = nighthawk;
       break;
 
     case '2':
-      chosenTheme = './topics/otter_flashcard_data.txt';
+      chosenTheme = otter;
       break;
 
     case '3':
-      chosenTheme = './topics/raccoon_flashcard_data.txt';
+      chosenTheme = raccoon;
       break;
 
     default:
       console.log(`Темы под номером "${chosenTheme}" не существует!`);
-      setTimeout(registrateUser, 3000);
+      setTimeout(registrateUser, 4000);
+      setTimeout(console.log, 1000, 3);
+      setTimeout(console.log, 2000, 2);
+      setTimeout(console.log, 3000, 1);
       break;
   }
+
+  theme = chosenTheme;
 }
 registrateUser();
+
+module.exports = theme;

@@ -34,3 +34,5 @@ for (let i = 0; i < raccoonArr.length; i += 1) {
 }
 
 console.log(nighthawk, otter, raccoon);
+
+module.exports = { nighthawk, otter, raccoon };
