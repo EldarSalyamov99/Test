@@ -1,5 +1,5 @@
 const readlineSync = require('readline-sync');
-const { nighthawk, otter, raccoon, slang } = require('./Topics');
+const { nighthawk, otter, raccoon, slang, assorty } = require('./Topics');
 const User = require('./User');
 
 const newUser = new User();
@@ -19,6 +19,7 @@ function registrateUser() {
     2. Otter
     3. Raccoon
     4. Slang
+    5. Assorty
 
     `
   );
@@ -40,6 +41,10 @@ function registrateUser() {
 
     case '4':
       chosenTheme = slang;
+      break;
+      
+    case '5':
+      chosenTheme = assorty;
       break;
 
     default:

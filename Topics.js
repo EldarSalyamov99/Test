@@ -39,6 +39,14 @@ for (let i = 0; i < slangArr.length; i += 1) {
   slang.push(slangArr[i].trim().split('\n'));
 }
 
+const assortyArr = fs
+  .readFileSync(`${__dirname}/topics/assort.txt`, 'utf-8')
+  .split('\n\n');
+const assorty = [];
+for (let i = 0; i < assortyArr.length; i += 1) {
+  assorty.push(assortyArr[i].trim().split('\n'));
+}
+
 //console.log(nighthawk, otter, raccoon);
 
-module.exports = { nighthawk, otter, raccoon, slang };
+module.exports = { nighthawk, otter, raccoon, slang, assorty };
