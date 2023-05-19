@@ -18,7 +18,7 @@ function registrateUser() {
     2. Otter
     3. Raccoon
     4. Slang
-    
+
     `
   );
 
