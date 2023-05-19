@@ -3,9 +3,12 @@ const User = require('./User');
 
 function registrateUser() {
   console.clear();
+
   const userName = readlineSync.question('Введите своё имя: ');
   const newUser = new User(userName);
+
   console.clear();
+
   let chosenTheme = readlineSync.question(
     `Здравствуйте, ${newUser.name}! Выберите номер темы:
 
@@ -33,6 +36,7 @@ function registrateUser() {
 
     default:
       console.log(`Темы под номером "${chosenTheme}" не существует!`);
+      setTimeout(registrateUser, 3000);
       break;
   }
 }
