@@ -1,5 +1,5 @@
 const readlineSync = require('readline-sync');
-const { nighthawk, otter, raccoon } = require('./Topics');
+const { nighthawk, otter, raccoon, slang } = require('./Topics');
 const User = require('./User');
 
 
@@ -7,9 +7,9 @@ const newUser = new User();
 let theme;
 function registrateUser() {
   console.clear();
-  
+
   newUser.name = readlineSync.question('Введите своё имя: ');
- 
+
 
   console.clear();
 
@@ -19,7 +19,8 @@ function registrateUser() {
     1. Nighthawk
     2. Otter
     3. Raccoon
-    
+    4. Slang
+
     `
   );
 
@@ -36,6 +37,10 @@ function registrateUser() {
 
     case '3':
       chosenTheme = raccoon;
+      break;
+
+    case '4':
+      chosenTheme = slang;
       break;
 
     default:
