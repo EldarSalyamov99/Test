@@ -15,7 +15,7 @@ for (let i = 0; i < theme.length; i++) {
     newUser.wrongAnsw += 1
     console.log(`Ответ не верный!\n Правильный ответ: ${theme[i][1]}\n`)
   }
-  
+
 }console.clear()
-console.log(`Вопросы закончились.\n\nВы набрали ${newUser.scores} очков из ${theme.length*100}.\nПравильных ответов: ${newUser.rightAnsw}\nНеправильных ответов: ${newUser.wrongAnsw}`);
+console.log(`Вопросы закончились.\n\n${newUser.name}, Вы набрали ${newUser.scores} очков из ${theme.length*100}.\nПравильных ответов: ${newUser.rightAnsw}\nНеправильных ответов: ${newUser.wrongAnsw}`);
 

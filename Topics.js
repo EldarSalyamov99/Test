@@ -33,6 +33,6 @@ for (let i = 0; i < raccoonArr.length; i += 1) {
   raccoon.push(raccoonArr[i].trim().split('\n'));
 }
 
-console.log(nighthawk, otter, raccoon);
+//console.log(nighthawk, otter, raccoon);
 
 module.exports = { nighthawk, otter, raccoon };
